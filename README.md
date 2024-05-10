@@ -13,8 +13,10 @@ The main aim of this project was to assign labels of 10 clusters (from 0 to 9) t
 
 
 * For the adjacency data, we performed Spectral Clustering. This involved performing eigen decomposition of the Laplacian matrix followed by selection of smallest 10 eigenvectors.
+   Spectral clustering is preferred for its ability to handle non-linearly separable data and detect clusters of varying     shapes and sizes, making it suitable for complex datasets where traditional methods like K-means may struggle.
 
 * For the attributes data, we first standardize the data to have 0 mean and standard devation of 1, and then perform PCA (preserving 0.9 fraction of variance) to reduce the dimensionality of the attributes.
+  PCA is employed to reduce the dimensionality of data, noise reduction, and improved model performance by capturing the most relevant features.
 
 * We then concatenate the normalized attributes and the eigenvectors to get our final embeddings for each node.
 
