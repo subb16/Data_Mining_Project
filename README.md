@@ -45,6 +45,7 @@ The main aim of this project was to assign labels of 10 clusters (from 0 to 9) t
   <!-- <img src = "images/gnn.jpg" align='center' height = 250 width = 600>   -->
 
   Update equation (Normal and Matrix Form):
+  
 $$
 h_i^{(l+1)} = \sigma \left( \sum_{j=1}^{N(i)} \frac{a_{ij}}{d_{ii}} (h_j^{(l)} w_{ji}^{(l)}) + h_i^{(l)} b_i^{(l)} \right)
 $$
