@@ -21,6 +21,7 @@ The project indtroduces us to a kaggle competition where we have to apply Dimens
 
 # 2. Failed GNNs approaches
 
+<img src = "pipelines/gnnmainwhite.gif" align='center' height = 100 width = 500><img src = "pipelines/matrix.jpg" align='center' height = 100 width = 500>
   ## Graph Convolutional Network (GCN) Based
 
   This was one of the failed approaches that we used which didn't give good accuracy maybe because of the reason that there are only around 11k nodes but some of the nodes even have 6k edges so the networks was not able to learn anything much in less no. of layers and we could not train large networks due to computing power issues.
