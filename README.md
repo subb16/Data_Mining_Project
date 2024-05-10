@@ -7,7 +7,10 @@ The project indtroduces us to a kaggle competition where we have to apply Dimens
 
 # 1. Our Approach : Spectral Decomposition followed by clustering
 
-<img src = "pipelines/spec.jpg" align='center' height = 400 width = 1000>
+<p align="center">
+  <img src = "images/spec.jpg" align='center' height = 400 width = 1000 style="display: block; margin: 0 auto">
+</p>
+
 
 * Performed Spectral Clustering on the Adjacency matrix data provided to reduce the dimensionality of the data from to 10. This involved performing eigen decomposition of the Laplacian matrix followed by selection of smallest 10 eigen vectors.
 
@@ -21,16 +24,17 @@ The project indtroduces us to a kaggle competition where we have to apply Dimens
 
 # 2. Failed GNNs approaches
 
-<img src = "pipelines/gnn.jpg" align='center' height = 550 width = 1000>
 
 ## Graph Convolutional Network (GCN) Based
 
+   <img src = "images/gnn.jpg" align='center' height = 250 width = 600>  
+
   This was one of the failed approaches that we used which didn't give good accuracy maybe because of the reason that there are only around 11k nodes but some of the nodes even have 6k edges so the networks was not able to learn anything much in less no. of layers and we could not train large networks due to computing power issues.
 
-* Used the matrix form of GCN to produce node embeddings of the graph data. Trained two layers of GCN.
+* Used the matrix form of GCN to produce node embeddings of the graph data. Trained two layers of GCN. The training data has come from the seed data provided.
 
-* Used Negative Sampling to calculate the loss function. Lost function we used was the dot product of the embeddings of the nodes with the seeds embeddings.
-
+* Used Negative Sampling to calculate the loss. We sampled 30 negatives for one node of a category and used a loss function similar to cross entropy loss, for one category made took one node from the seed data, took it's dot product with another node from same category divided by summation of dot products with all the 30 negative samples. Then we take negative log of the above fraction and do this for all the pairs categorywise in the seed data.
+  
 * Now used the above trained node embeddings to perform K-Means clustering. Initialization of the K clusters were done to the mean of the nodes provided in the seed.csv file.
 
 ## GraphSage Network Based
