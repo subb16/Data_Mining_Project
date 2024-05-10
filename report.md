@@ -7,7 +7,7 @@ The project indtroduces us to a kaggle competition where we have to apply Dimens
 
 # 1. Our Approach : Spectral Decomposition followed by clustering
 
-<img src = "pipelines/spec.jpg" align='center' height = 400 width = 1000>
+<img src = "images/spec.jpg" align='center' height = 400 width = 1000>
 
 * Performed Spectral Clustering on the Adjacency matrix data provided to reduce the dimensionality of the data from to 10. This involved performing eigen decomposition of the Laplacian matrix followed by selection of smallest 10 eigen vectors.
 
@@ -21,9 +21,10 @@ The project indtroduces us to a kaggle competition where we have to apply Dimens
 
 # 2. Failed GNNs approaches
 
-<img src = "pipelines/gnn.jpg" align='center' height = 550 width = 1000>
 
 ## Graph Convolutional Network (GCN) Based
+
+   <img src = "images/gnn.jpg" align='center' height = 350 width = 800>  
 
   This was one of the failed approaches that we used which didn't give good accuracy maybe because of the reason that there are only around 11k nodes but some of the nodes even have 6k edges so the networks was not able to learn anything much in less no. of layers and we could not train large networks due to computing power issues.
 
