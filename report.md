@@ -34,7 +34,7 @@ The project indtroduces us to a kaggle competition where we have to apply Dimens
 * Used the matrix form of GCN to produce node embeddings of the graph data. Trained two layers of GCN. The training data has come from the seed data provided.
 
 * Used Negative Sampling to calculate the loss. We sampled 30 negatives for one node of a category and used a loss function similar to cross entropy loss, for one category made took one node from the seed data, took it's dot product with another node from same category divided by summation of dot products with all the 30 negative samples. Then we take negative log of the above fraction and do this for all the pairs categorywise in the seed data.
-* 
+  
 * Now used the above trained node embeddings to perform K-Means clustering. Initialization of the K clusters were done to the mean of the nodes provided in the seed.csv file.
 
 ## GraphSage Network Based
