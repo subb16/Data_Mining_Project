@@ -92,19 +92,13 @@ $$
   This approach gave a score of 0.10132 which is a very poor score, and the reason is again the highly dense nature of th graph.
 
 # Kaggle Performance
-In our pursuit of optimizing the clustering performance for the given dataset, we made some adjustments to our method, resulting in a significant improvement in performance. Below are the key modifications we made:
+For getting a better score on the kaggle leaderboard, we made some adjustments to our method, resulting in a significant improvement in performance. Below are the key modifications we made:
 
  ## Utilization of Normalized Laplacian
-In our previous approach, we employed the standard Laplacian matrix for spectral clustering. However, we found that substituting it with the normalized Laplacian yielded better results. The normalized Laplacian matrix accounts for high variations in the degree of connectivity among nodes ( mean degree of nodes is around 6k with a std. deviation of 2k ) , leading to more accurate clustering results. The mean degree of nodes is around 6k with a std. deviation of 2k. 
+In our previous approach, we employed the standard Laplacian matrix for spectral clustering. However, we found that substituting it with the **Normalized Laplacian** yielded better results. The normalized Laplacian matrix proved to be better as it is scale invariant and is not effected by the variance in the degrees  of the nodes ( standard deviation deviation of around 2000 ) , leading to more accurate clustering results. 
 
- ## Direct Clustering without Neural Network
-Also earlier, we incorporated a neural network (NN) for refining the clustering results. However, we experimented with a simplified approach by directly clustering all the points without employing a neural network for post-processing. This streamlined approach eliminated the additional complexity introduced by the neural network training and inference process.
+ ## Not using Neural Network
+Also earlier, we used a neural network (NN) for predicting the labels of the last 1000 noeds. However, we experimented with a simplified approach by directly clustering all the points without a neural network. This approach eliminated the additional complexity introduced by the neural network training and inference process.
 
  ## Result
-The new methodology resulted in a notable increase in the Kaggle score from 0.14390to **0.2791**.
-
-
-  
-
-  
-
+The new methodology resulted in a notable increase in the Kaggle score from 0.14390 to **0.2791**.
