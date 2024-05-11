@@ -95,7 +95,7 @@ $$
 In our pursuit of optimizing the clustering performance for the given dataset, we made some adjustments to our method, resulting in a significant improvement in performance. Below are the key modifications we made:
 
  ## Utilization of Normalized Laplacian
-In our previous approach, we employed the standard Laplacian matrix for spectral clustering. However, we found that substituting it with the normalized Laplacian yielded better results. The normalized Laplacian matrix accounts for variations in the degree of connectivity among nodes, leading to more accurate clustering results.
+In our previous approach, we employed the standard Laplacian matrix for spectral clustering. However, we found that substituting it with the normalized Laplacian yielded better results. The normalized Laplacian matrix accounts for high variations in the degree of connectivity among nodes ( mean degree of nodes is around 6k with a std. deviation of 2k ) , leading to more accurate clustering results. The mean degree of nodes is around 6k with a std. deviation of 2k. 
 
  ## Direct Clustering without Neural Network
 Also earlier, we incorporated a neural network (NN) for refining the clustering results. However, we experimented with a simplified approach by directly clustering all the points without employing a neural network for post-processing. This streamlined approach eliminated the additional complexity introduced by the neural network training and inference process.
