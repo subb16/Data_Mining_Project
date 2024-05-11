@@ -102,3 +102,6 @@ Also earlier, we used a neural network (NN) for predicting the labels of the las
 
  ## Result
 The new methodology resulted in a notable increase in the Kaggle score from 0.14390 to **0.2791**.
+
+# Conclusion
+In this project, we tried to cluster 11952 graph nodes into 10 clusters using Spectral Clustering and Graph Neural Networks (GNNs). Our main approach involved Spectral Decomposition followed by clustering. We also explored GNNs but faced challenges due to the graph's highly dense nature. By using the Normalized Laplacian for spectral clustering and eliminating the neural network for label prediction, we got a final accuracy score of 0.2791.
