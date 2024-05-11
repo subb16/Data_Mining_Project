@@ -3,7 +3,13 @@
 
 # Introduction
 
-The main aim of this project was to assign labels of 10 clusters (from 0 to 9) to 11952 graph nodes, whose adjacency and attributes data were given. For assigning the labels, 3 seed points of each cluster were provided. We have tried multiple approaches like Spectral Clustering and Graph Neural Networks. Now, We will the see the details (pipelines and results) of every approach.
+The main aim of this project was to assign labels of 10 clusters (from 0 to 9) to 11952 graph nodes. We were given the folowing data:
+
+1. `adjacency.csv`: Adjacency matrix of the graph, containing the information related to its structure.
+2. `attributes.csv`: 103 Attributes for each node of the graph, giving additional information regarding each node.
+3. `seed.csv`: Had 3 seed nodes from each cluster, giving the labels for 30 nodes in total.
+
+We tried multiple approaches like Spectral Clustering and Graph Neural Networks. Now, We will the see the details (pipelines and results) of every approach.
 
 # 1. Our Approach : Spectral Decomposition followed by clustering
 
