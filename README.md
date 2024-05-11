@@ -90,6 +90,20 @@ $$
 * The classifier and the GraphSAGE network are trained jointly by using a binary cross-entropy loss, and then we extract the embeddings from the GraphSAGE output and perform K-means as was done in previous approaches.
 
   This approach gave a score of 0.10132 which is a very poor score, and the reason is again the highly dense nature of th graph.
+
+# Kaggle Performance
+In our pursuit of optimizing the clustering performance for the given dataset, we made some adjustments to our method, resulting in a significant improvement in performance. Below are the key modifications we made:
+
+ ## Utilization of Normalized Laplacian
+In our previous approach, we employed the standard Laplacian matrix for spectral clustering. However, we found that substituting it with the normalized Laplacian yielded better results. The normalized Laplacian matrix accounts for variations in the degree of connectivity among nodes, leading to more accurate clustering results.
+
+ ## Direct Clustering without Neural Network
+Also earlier, we incorporated a neural network (NN) for refining the clustering results. However, we experimented with a simplified approach by directly clustering all the points without employing a neural network for post-processing. This streamlined approach eliminated the additional complexity introduced by the neural network training and inference process.
+
+ ## Result
+By implementing these modifications, there was a substantial enhancement in the kaggle performance. The new methodology resulted in a notable increase in the Kaggle score from 0.25 to 0.2791. 
+
+
   
 
   
