@@ -101,7 +101,7 @@ In our previous approach, we employed the standard Laplacian matrix for spectral
 Also earlier, we incorporated a neural network (NN) for refining the clustering results. However, we experimented with a simplified approach by directly clustering all the points without employing a neural network for post-processing. This streamlined approach eliminated the additional complexity introduced by the neural network training and inference process.
 
  ## Result
-By implementing these modifications, there was a substantial enhancement in the kaggle performance. The new methodology resulted in a notable increase in the Kaggle score from 0.25 to 0.2791. 
+The new methodology resulted in a notable increase in the Kaggle score from 0.14390to **0.2791**.
 
 
   
